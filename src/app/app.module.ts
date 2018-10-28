@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import { YoutubesearchComponent } from './youtubesearch/youtubesearch.component';
+import { SearchResultComponent } from './youtubesearch/search-result.component';
+import { SearchBoxComponent } from './youtubesearch/search-box.component';
+import {youTubeSearchInjectables} from './youtubesearch/youtubesearch.injectables';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    YoutubesearchComponent,
+    SearchResultComponent,
+    SearchBoxComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [youTubeSearchInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
